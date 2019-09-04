@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="ico/10.png">
-    <script type="text/javascript" src="js/my_js.js"></script>
+    <script type="text/javascript" src="verify.js"></script>
     <title>HERITAGE</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -68,17 +68,17 @@
             <p class="text">A NumPy matrix calculator created to perform matrix operations ranging from determinants to 
                 Simultaneous equations up to 4x4 matix dimensions.<br />Link: <a href="https://github.com/Adminixtrator/Python/tree/master/Numpy_Matrix-Calculator_v2.0">https://github.com/Adminixtrator/Python/tree/master/Numpy_Matrix-Calculator_v2.0</a>
             </p><br /><br />
-            <script>
-                    function verify(){
-                        alert("Your feedback will be sent to minixtrator@gmail.com");
-                    }
-                </script>
-            <form action="#" method="get" onsubmit="verify()">
+            <form action="#" method="post">
                 <h5 class="header-3">CONTACT</h5><br />
-                <p class="text">Name: <input name="name" id="name" type="text" placeholder=" Your name here.." required></p><br />
-                <p class="text">Email: <input name="email" id="email" type="email" placeholder=" example@gmail.com" required></p><br />
-                <p class="text">Message:<br /><input name="text" minlength="20" size="10" id="message" type="text" placeholder=" Enter your message here.." required=20></p><br />
-                <p><input class="button" type="submit" value="SEND"></p>
+                <p class="text">Full Name:</p>
+                <input type="text" class="asdf" name="my_form" id="name" onblur="checkInput('name', 'error', 4, 'Name', 'four' )" required><span class="error" id="error"></span>
+                <p class="text">Email:</p>
+                <input type="email" class="asdf" name="my_form" required placeholder=" example@gmail.com">
+                <p class="text">Message Title:</p>
+                <input type="text" class="asdf" name="my_form" required>
+                <p class="text">Message:</p>
+                <textarea name="essay" class="asdf" cols="30" rows="10" placeholder="Message" id="message" onblur="checkInput('message', 'error1', 20, 'Message', 'twenty' )" required></textarea><span class="error" id="error1">
+                <input type="submit" value="SEND" class="button">
             </form>
     </div>
     <footer style="padding: 4em; padding-bottom: 0px; text-align: center;">
